@@ -3,7 +3,6 @@ import Appcontext from './Create'
 import { FaCartShopping } from "react-icons/fa6";
 import { v4 } from 'uuid';
 
-
 function Search() {
 const {soma,setsoma}=useContext(Appcontext)
 const {estado,setestado}=useContext(Appcontext)
@@ -27,9 +26,19 @@ const adicionarelementonocarrinho=(a,b,c)=>{
 
 
 return (
+
 <div className="search" style={{opacity:estado.length>0?"1":"0"}} >
+
+
+
 {estado.map((peça)=>(
+
+
 <div key={v4()}  className="conteudo">
+
+
+
+
 
 <button onClick={()=>adicionarelementonocarrinho(peça.thumbnail,peça.price,peça.title)} className='button-card' >
 <FaCartShopping />
